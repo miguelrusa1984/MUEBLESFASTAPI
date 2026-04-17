@@ -2,10 +2,8 @@
 from conexión.config import app, db
 from werkzeug.security import generate_password_hash, check_password_hash
 
-# ELIMINA esta línea: db = SQLAlchemy(app) <--- CAUSA EL ERROR
-
 class Users(db.Model):
-    id_user = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True) 
     nom_user = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(255), nullable=False)
     rol = db.Column(db.String(15), nullable=False)
@@ -18,7 +16,7 @@ class Users(db.Model):
 
     def to_dict(self):
         return {
-            'id_user': self.id_user,
+            'id': self.id,
             'usuario': self.nom_user,
             'rol': self.rol
         }

@@ -17,7 +17,7 @@ POST http://localhost:8000/muebles/add
 Content-Type: application/json
 
 {
-    "nombre": "Mesa Ergonómica",
+    "nombre": "Butaco Ergonómica",
     "tipo": "Oficina",
     "material": "Malla y Metal",
     "precio": 150.50,
@@ -25,5 +25,71 @@ Content-Type: application/json
 }
 
 ### Eliminar un mueble por ID
-DELETE http://localhost:8000/muebles/eliminar/55
+DELETE http://localhost:8000/muebles/eliminar/44
 Accept: application/json
+
+##--------------------------------------------------------
+
+### Verificar si la rura es publica
+GET http://localhost:8000/api/public
+
+
+### Registro de un nuevo usuario (método directo)
+POST http://127.0.0.1:8000/auth/register
+Content-Type: application/json
+
+{
+    "nom_user": "AlejandraMora",
+    "password": "1073511732"
+}
+
+
+###  Iniciar Sesión para obtener el Token
+POST http://127.0.0.1:8000/api/login
+Content-Type: application/json
+
+{
+    "nom_user": "Angel",
+    "password": "11449" 
+}
+
+### Consultar usuario actual
+GET http://127.0.0.1:8000/api/usuario
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMTU0MSwianRpIjoiNmY2OWVjNTQtZWRlYS00OTEzLWE4OTItNGJhNGEyMWYyOWRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDAxNTQxLCJjc3JmIjoiZTdkMGZhMjgtZjEyZS00MmYyLTg1MzUtNDdjMDU5NWUyMjEzIiwicm9sZSI6ImFkbWluIn0.7xhrFwUvET5eeBfrqgr_KYE5-ykdU496UocVEclna1U
+Accept: application/json
+
+
+### Obtener perfil del usuario autenticado
+GET http://127.0.0.1:8000/api/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMTU0MSwianRpIjoiNmY2OWVjNTQtZWRlYS00OTEzLWE4OTItNGJhNGEyMWYyOWRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDAxNTQxLCJjc3JmIjoiZTdkMGZhMjgtZjEyZS00MmYyLTg1MzUtNDdjMDU5NWUyMjEzIiwicm9sZSI6ImFkbWluIn0.7xhrFwUvET5eeBfrqgr_KYE5-ykdU496UocVEclna1U
+Accept: application/json
+
+
+### 2. Usar el Token para ver la lista (Sustituye el código largo)
+GET http://127.0.0.1:8000/api/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMTU0MSwianRpIjoiNmY2OWVjNTQtZWRlYS00OTEzLWE4OTItNGJhNGEyMWYyOWRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDAxNTQxLCJjc3JmIjoiZTdkMGZhMjgtZjEyZS00MmYyLTg1MzUtNDdjMDU5NWUyMjEzIiwicm9sZSI6ImFkbWluIn0.7xhrFwUvET5eeBfrqgr_KYE5-ykdU496UocVEclna1U
+Accept: application/json
+
+
+### Obtener un nuevo access token usando el REFRESH TOKEN (Correcto)
+POST http://127.0.0.1:8000/auth/refresh
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMTgxMSwianRpIjoiYjM4OWQ1ZDgtMjVjZC00MDJkLWJhZGQtZWU2NjVkODljZjQyIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJBbmdlbCIsIm5iZiI6MTc3NjQwMTgxMSwiY3NyZiI6IjJiNDc1OWEzLTgxODAtNGRhNi05NGQzLWIwMjQ2NzQzNWNmYiJ9.hv1_h15rC3koXHNEyiVLOqiyVId_1kCC8aGSgvJ7Jag
+Accept: application/json
+
+
+### Revocar el token actual
+DELETE http://127.0.0.1:8000/auth/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMTU0MSwianRpIjoiNmY2OWVjNTQtZWRlYS00OTEzLWE4OTItNGJhNGEyMWYyOWRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDAxNTQxLCJjc3JmIjoiZTdkMGZhMjgtZjEyZS00MmYyLTg1MzUtNDdjMDU5NWUyMjEzIiwicm9sZSI6ImFkbWluIn0.7xhrFwUvET5eeBfrqgr_KYE5-ykdU496UocVEclna1U
+Accept: application/json
+
+
+### Registro de un nuevo Administrador
+POST http://127.0.0.1:8000/auth/register-admin
+Content-Type: application/json
+
+{
+    "nom_user": "Angel",
+    "password": "11449"
+}
+
+
