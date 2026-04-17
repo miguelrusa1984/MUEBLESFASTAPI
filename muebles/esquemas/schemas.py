@@ -1,7 +1,8 @@
 from pydantic import BaseModel
 from typing import Optional
 
-class MuebleBase(BaseModel):
+class Mueble(BaseModel):
+    id: Optional[int] = None
     nombre: str
     tipo: str
     material: str
@@ -9,4 +10,4 @@ class MuebleBase(BaseModel):
     stock: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True

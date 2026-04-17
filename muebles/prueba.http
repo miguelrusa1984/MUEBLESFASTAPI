@@ -1,0 +1,29 @@
+### Verificar conexión al servidor
+GET http://localhost:8000/muebles/
+
+### Consultar todos los muebles
+GET http://localhost:8000/muebles/mueble_all
+
+### Consultar un mueble por ID
+GET http://localhost:8000/muebles/mueble/30
+Accept: application/json
+
+### Consultar un mueble por ID (método directo)
+GET http://localhost:8000/muebles/mueble/40
+Accept: application/json
+
+### agregar un nuevo mueble
+POST http://localhost:8000/muebles/add
+Content-Type: application/json
+
+{
+    "nombre": "Mesa Ergonómica",
+    "tipo": "Oficina",
+    "material": "Malla y Metal",
+    "precio": 150.50,
+    "stock": 20
+}
+
+### Eliminar un mueble por ID
+DELETE http://localhost:8000/muebles/eliminar/55
+Accept: application/json
