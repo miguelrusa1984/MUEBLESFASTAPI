@@ -17,15 +17,15 @@ POST http://localhost:8000/muebles/add
 Content-Type: application/json
 
 {
-    "nombre": "Butaco Ergonómica",
-    "tipo": "Oficina",
+    "nombre": "Baserefrigerante",
+    "tipo": "cocina",
     "material": "Malla y Metal",
     "precio": 150.50,
-    "stock": 20
+    "stock": 100
 }
 
 ### Eliminar un mueble por ID
-DELETE http://localhost:8000/muebles/eliminar/44
+DELETE http://localhost:8000/muebles/eliminar/58
 Accept: application/json
 
 ##--------------------------------------------------------
@@ -39,8 +39,8 @@ POST http://127.0.0.1:8000/auth/register
 Content-Type: application/json
 
 {
-    "nom_user": "AlejandraMora",
-    "password": "1073511732"
+    "nom_user": "Camilo",
+    "password": "9876"
 }
 
 
@@ -55,31 +55,31 @@ Content-Type: application/json
 
 ### Consultar usuario actual
 GET http://127.0.0.1:8000/api/usuario
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMTU0MSwianRpIjoiNmY2OWVjNTQtZWRlYS00OTEzLWE4OTItNGJhNGEyMWYyOWRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDAxNTQxLCJjc3JmIjoiZTdkMGZhMjgtZjEyZS00MmYyLTg1MzUtNDdjMDU5NWUyMjEzIiwicm9sZSI6ImFkbWluIn0.7xhrFwUvET5eeBfrqgr_KYE5-ykdU496UocVEclna1U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMzg5NywianRpIjoiN2IyNWQwMTYtOGFmMy00ZjE5LWI0YmYtZDAzZWJlMmRiMTQyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDAzODk3LCJjc3JmIjoiNjVjNTY2OGMtY2ZkMy00OTdlLThhNmEtNmQyMDM3OTYyOWU1Iiwicm9sZSI6ImFkbWluIn0.ywc_Fj0htH3_yPB-6Q2N8jWxAxsLM8G-1cIZ5HtcGsQ
 Accept: application/json
 
 
 ### Obtener perfil del usuario autenticado
 GET http://127.0.0.1:8000/api/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMTU0MSwianRpIjoiNmY2OWVjNTQtZWRlYS00OTEzLWE4OTItNGJhNGEyMWYyOWRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDAxNTQxLCJjc3JmIjoiZTdkMGZhMjgtZjEyZS00MmYyLTg1MzUtNDdjMDU5NWUyMjEzIiwicm9sZSI6ImFkbWluIn0.7xhrFwUvET5eeBfrqgr_KYE5-ykdU496UocVEclna1U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMzg5NywianRpIjoiN2IyNWQwMTYtOGFmMy00ZjE5LWI0YmYtZDAzZWJlMmRiMTQyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDAzODk3LCJjc3JmIjoiNjVjNTY2OGMtY2ZkMy00OTdlLThhNmEtNmQyMDM3OTYyOWU1Iiwicm9sZSI6ImFkbWluIn0.ywc_Fj0htH3_yPB-6Q2N8jWxAxsLM8G-1cIZ5HtcGsQ
 Accept: application/json
 
 
 ### 2. Usar el Token para ver la lista (Sustituye el código largo)
 GET http://127.0.0.1:8000/api/admin
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMTU0MSwianRpIjoiNmY2OWVjNTQtZWRlYS00OTEzLWE4OTItNGJhNGEyMWYyOWRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDAxNTQxLCJjc3JmIjoiZTdkMGZhMjgtZjEyZS00MmYyLTg1MzUtNDdjMDU5NWUyMjEzIiwicm9sZSI6ImFkbWluIn0.7xhrFwUvET5eeBfrqgr_KYE5-ykdU496UocVEclna1U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMzg5NywianRpIjoiN2IyNWQwMTYtOGFmMy00ZjE5LWI0YmYtZDAzZWJlMmRiMTQyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDAzODk3LCJjc3JmIjoiNjVjNTY2OGMtY2ZkMy00OTdlLThhNmEtNmQyMDM3OTYyOWU1Iiwicm9sZSI6ImFkbWluIn0.ywc_Fj0htH3_yPB-6Q2N8jWxAxsLM8G-1cIZ5HtcGsQ
 Accept: application/json
 
 
 ### Obtener un nuevo access token usando el REFRESH TOKEN (Correcto)
 POST http://127.0.0.1:8000/auth/refresh
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMTgxMSwianRpIjoiYjM4OWQ1ZDgtMjVjZC00MDJkLWJhZGQtZWU2NjVkODljZjQyIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJBbmdlbCIsIm5iZiI6MTc3NjQwMTgxMSwiY3NyZiI6IjJiNDc1OWEzLTgxODAtNGRhNi05NGQzLWIwMjQ2NzQzNWNmYiJ9.hv1_h15rC3koXHNEyiVLOqiyVId_1kCC8aGSgvJ7Jag
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwNDA5OSwianRpIjoiZDI4MGMxMDEtMTA2OS00MDhlLWE5NDMtMTkyM2Q0NWI1YjZhIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJBbmdlbCIsIm5iZiI6MTc3NjQwNDA5OSwiY3NyZiI6IjI5YTI1ZTg2LTI0YjItNDJiOS1iZGQ1LThjM2ZhODAyNjNiZiJ9.v60ulol_TVaPeASHUu14mw-9dgpR0nF2GzywO7ngvaY
 Accept: application/json
 
 
 ### Revocar el token actual
 DELETE http://127.0.0.1:8000/auth/logout
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwMTU0MSwianRpIjoiNmY2OWVjNTQtZWRlYS00OTEzLWE4OTItNGJhNGEyMWYyOWRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDAxNTQxLCJjc3JmIjoiZTdkMGZhMjgtZjEyZS00MmYyLTg1MzUtNDdjMDU5NWUyMjEzIiwicm9sZSI6ImFkbWluIn0.7xhrFwUvET5eeBfrqgr_KYE5-ykdU496UocVEclna1U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjQwNDExNywianRpIjoiNmM0ODI4ZjYtNGNhZS00ZjA3LTkxMzEtODlkYWQ4ZWE4NTdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkFuZ2VsIiwibmJmIjoxNzc2NDA0MTE3LCJjc3JmIjoiZTYxM2I2OWMtZmRmZi00MjFkLWFkZDgtZDFjZTY5Y2M1NGVjIiwicm9sZSI6ImFkbWluIn0.EbmJoqJvic5P0bJ9uY2ECyBd0vgDLe80ElZiHEmsx_w
 Accept: application/json
 
 
@@ -88,8 +88,8 @@ POST http://127.0.0.1:8000/auth/register-admin
 Content-Type: application/json
 
 {
-    "nom_user": "Angel",
-    "password": "11449"
+    "nom_user": "Nikolas",
+    "password": "98765"
 }
 
 
