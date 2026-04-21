@@ -7,3 +7,6 @@ gunicorn
 fastapi
 uvicorn
 gunicorn
+sqlalchemy
+cryptography
+python-dotenv
